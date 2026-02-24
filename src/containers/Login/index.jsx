@@ -4,7 +4,6 @@ import {
   Form,
   InputContainer,
   LeftContainer,
-  Link,
   RightContainer,
   Title,
 } from './styles';
@@ -14,11 +13,13 @@ export function Login() {
   return (
     <Container>
       <LeftContainer>
-        <img src={Logo} alt="Logo do DevBurger" />
+        <img src={Logo} alt="Logo do DevBurger"/>
       </LeftContainer>
       <RightContainer>
         <Title>
-          Olá, seja bem vindo ao <span>DevBurger</span>, Acesse com seu
+          Olá, seja bem vindo ao <span>DevBurger</span>,
+          <br />
+           Acesse com seu
           <span> Login e senha.</span>
         </Title>
         <Form>
@@ -31,10 +32,9 @@ export function Login() {
             <label>Senha</label>
             <input type="password" placeholder="Digite sua senha" />
           </InputContainer>
-          <Link>Esqueci minha senha.</Link>
           <Button>Entrar</Button>
         </Form>
-        <Link>Não tem conta? Cadastre-se</Link>
+        <p>Não tem conta? <a href="#">Cadastre-se</a></p>
       </RightContainer>
     </Container>
   );
