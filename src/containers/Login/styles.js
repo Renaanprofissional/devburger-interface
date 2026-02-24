@@ -99,4 +99,11 @@ export const InputContainer = styled.div`
         font-family: "Poppins", sans-serif;
     }
 
+    p{
+        font-size: 14px;
+        line-height: 80%;
+        color: #cf3057;
+        height: 10px;
+    }
+
 `;
