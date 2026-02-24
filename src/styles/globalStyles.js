@@ -8,7 +8,7 @@ const globalStyles = createGlobalStyle`
         outline: none;
         }
 
-        button {
+        button, a {
             cursor: pointer;
         }
 `;

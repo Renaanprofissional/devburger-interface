@@ -45,10 +45,15 @@ export const RightContainer = styled.div`
        color: #fff;
        font-size: 18px;
        font-weight: 800;
+       font-family: "Poppins", sans-serif;
 
        a{
-        color: #9758a6;
+        color: #fff;
         text-decoration: underline;
+       }
+       a:hover {
+        color: #9758a6;
+        transition: all 0.6s ease;
        }
     }
 `;
@@ -70,6 +75,7 @@ export const Form = styled.form`
     padding: 20px;
     width: 100%;
     max-width: 400px;
+
 `;
 
 export const InputContainer = styled.div`
@@ -90,8 +96,7 @@ export const InputContainer = styled.div`
         font-size: 18px;
         font-weight: 600;
         color: #fff;
+        font-family: "Poppins", sans-serif;
     }
 
 `;
-
-export const Button = styled.button``;

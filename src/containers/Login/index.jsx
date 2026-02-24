@@ -1,5 +1,4 @@
 import {
-  Button,
   Container,
   Form,
   InputContainer,
@@ -7,6 +6,8 @@ import {
   RightContainer,
   Title,
 } from './styles';
+
+import { Button } from '../../components/Button';
 import Logo from '../../assets/logo.png';
 
 export function Login() {
@@ -17,9 +18,9 @@ export function Login() {
       </LeftContainer>
       <RightContainer>
         <Title>
-          Olá, seja bem vindo ao <span>DevBurger</span>,
+          <span>Olá,</span> seja bem vindo ao <span>DevBurger</span>,
           <br />
-           Acesse com seu
+           <span>Acesse</span> com seu
           <span> Login e senha.</span>
         </Title>
         <Form>
