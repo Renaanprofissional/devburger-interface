@@ -13,6 +13,7 @@ import {
 
 import { Button } from '../../components/Button';
 import Logo from '../../assets/logo.png';
+import { api } from '../../services/api';
 
 export function Login() {
 
@@ -30,7 +31,14 @@ export function Login() {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    const response = await api.post('/session', {
+      email: data.email,
+      password: data.password
+    })
+
+    console.log(response);
+  };
 
 
   return (
