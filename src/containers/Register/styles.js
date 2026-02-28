@@ -63,11 +63,7 @@ export const RightContainer = styled.div`
 export const Title = styled.h2`
   font-family: "Road Rage", sans-serif;
   font-size: 40px;
-  color: #fff;
-
-  span {
-    color: #9758a6;
-  }
+  color: #9758A6;
 `;
 
 export const Form = styled.form`
@@ -111,14 +107,6 @@ export const InputContainer = styled.div`
 `;
 
 export const Link = styled(ReactLink)`
-  color: #fff;
-  text-decoration: underline;
-  font-size: 18px;
-  font-weight: 800;
-  font-family: "Poppins", sans-serif;
-
-  &:hover {
-    color: #9758a6;
-    transition: all 0.6s ease;
-  }
-`;
+    color: #fff;
+    text-decoration: underline;
+`

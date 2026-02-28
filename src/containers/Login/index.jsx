@@ -1,5 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useForm } from 'react-hook-form';
+import { set, useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
 
@@ -10,6 +11,7 @@ import {
   LeftContainer,
   RightContainer,
   Title,
+  Link,
 } from './styles';
 
 import { Button } from '../../components/Button';
@@ -17,6 +19,8 @@ import Logo from '../../assets/logo.png';
 import { api } from '../../services/api';
 
 export function Login() {
+
+  const navigate = useNavigate();
 
   const schema = yup
   .object({
@@ -34,13 +38,20 @@ export function Login() {
   });
   const onSubmit = async (data) => {
     const response = await toast.promise(
-      api.post('/session', {
+      api.post('/sessions', {
       email: data.email,
       password: data.password
     }),
     {
       pending: 'Verificando suas credenciais...',
-      success: 'Login bem-sucedido! Redirecionando...',
+      success: {
+        render() {
+          setTimeout(() => {
+            navigate('/');
+          }, 2000);
+          return 'Login realizado com sucesso!';
+        }
+      },
       error: 'Erro ao fazer login. Verifique suas credenciais e tente novamente.',
     }
     )
@@ -75,7 +86,7 @@ export function Login() {
           </InputContainer>
           <Button type="submit">Entrar</Button>
         </Form>
-        <p>Não tem conta? <a href="#">Cadastre-se</a></p>
+        <p>Não tem conta? <Link to="/cadastro">Cadastre-se</Link></p>
       </RightContainer>
     </Container>
   );
