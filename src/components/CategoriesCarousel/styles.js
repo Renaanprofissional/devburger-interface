@@ -35,12 +35,13 @@ background: url('${props => props.url}') no-repeat;
 background-size: cover;
 background-position: center;
 border-radius: 20px;
+cursor: grab;
 
 display: flex;
 align-items: center;
 padding: 20px 10px;
 width: 100%;
-height: 250px;
+height: 150px;
 
 p {
     color: #fff;

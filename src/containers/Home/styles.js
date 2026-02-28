@@ -26,7 +26,5 @@ export const Container = styled.section`
      ),
      url('${Background}');
      background-size: cover;
-     height: 500px;
+     height: 100vh;
 `
-
-export const Content = styled.div``
