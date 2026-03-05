@@ -1,22 +1,17 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { Home } from '../containers/Home';
-import { Login } from '../containers/Login';
-import { Register } from '../containers/Register';
-import { Menu } from '../containers/Menu';
+import { Cart, Home, Login, Menu, Register } from '../containers';
 import { Header } from '../components/Header';
-import Footer from '../components/Footer';
-import { Cart } from '../containers/Cart';
+import { Footer } from '../components/Footer';
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: 
-    (
+    element: (
       <>
-      <Header />
-      <Home />
-      <Footer />
+        <Header />
+        <Home />
+        <Footer />
       </>
     ),
   },
@@ -32,8 +27,8 @@ export const router = createBrowserRouter([
     path: '/cardapio',
     element: (
       <>
-      <Header />
-      <Menu />
+        <Header />
+        <Menu />
       </>
     ),
   },
