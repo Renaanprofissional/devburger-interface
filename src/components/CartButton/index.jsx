@@ -1,7 +1,7 @@
 import Cart from '../../assets/cart.png'
 import { ContainerButton } from './styles'
 
-export function CardButton({...props}) {
+export function CartButton({...props}) {
 
     return (
         <ContainerButton {...props}>
