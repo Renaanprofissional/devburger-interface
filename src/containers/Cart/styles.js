@@ -1,57 +1,55 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import Texture from '../../assets/texture.jpg';
 import Background from '../../assets/bg2.png';
 
 export const Container = styled.div`
-    width: 100%;
-    background: linear-gradient(
-            rgba(255, 255, 255, 0.8),
-            rgba(255, 255, 255, 0.8)
-             ),
-             url('${Background}');
-             background-size: cover;
-    min-height: 100vh;
-`
+  width: 100%;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url('${Background}');
+  background-size: cover;
+  min-height: 100vh;
+`;
 export const Banner = styled.div`
-    background: url('${Texture}');
-    background-color: #1f1f1f;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  background: url('${Texture}');
+  background-color: #1f1f1f;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
-    height: 180px;
+  height: 180px;
 
-    img {
-        height: 130px;
-    }
-`
+  img {
+    height: 130px;
+  }
+`;
 export const Title = styled.h1`
-    font-size: 32px;
-    font-weight: 800;
-    padding-bottom: 12px;
-    color: #61a120;
-    text-align: center;
-    position: relative;
+  font-size: 32px;
+  font-weight: 800;
+  padding-bottom: 12px;
+  color: #61a120;
+  text-align: center;
+  position: relative;
 
-    &::after {
-        content: '';
-        position: absolute;
-        width: 56px;
-        height: 4px;
-        background-color: #61a120;
-        bottom: 0;
-        left: calc(50% + -28px);
-    }
-`
+  &::after {
+    content: '';
+    position: absolute;
+    width: 56px;
+    height: 4px;
+    background-color: #61a120;
+    bottom: 0;
+    left: calc(50% + -28px);
+  }
+`;
 export const Content = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 20%;
-    width: 100%;
-    max-width: 1200px;
-    padding: 40px;
-    margin: 0 auto;
-    gap: 40px;
-`
+  display: grid;
+  grid-template-columns: 1fr 29%;
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px;
+  margin: 0 auto;
+  gap: 40px;
+`;
