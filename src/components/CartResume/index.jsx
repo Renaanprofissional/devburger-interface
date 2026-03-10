@@ -26,9 +26,34 @@ export function CartResume() {
 
   const submitOrder = async () => {
     const products = cartProducts.map((product) => {
-      return { id: product.id, quantity: product.quantity };
+      return {
+        id: product.id,
+        quantity: product.quantity,
+        price: product.price,
+      };
     });
 
+    try {
+      const { data } = await api.post('/create-payment-intent', { products });
+
+      navigate('/checkout', {
+        state: data,
+      });
+    } catch (err) {
+      toast.error('Erro, Tente novamente!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
+    }
+
+    {
+      /*
     try {
       const { status } = await api.post(
         '/orders',
@@ -51,6 +76,8 @@ export function CartResume() {
       }
     } catch (error) {
       toast.error('Falha no sistema, Tente novamente');
+    }
+*/
     }
   };
 
