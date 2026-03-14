@@ -9,3 +9,4 @@ export * from './CartResume';
 export * from './CartItems';
 export * from './Table';
 export { default as CheckoutForm } from './Stripe/CheckoutForm';
+export * from './SideNavAdmin';
