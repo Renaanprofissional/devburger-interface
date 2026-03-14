@@ -21,7 +21,7 @@ import { api } from '../../services/api';
 
 export function Login() {
   const navigate = useNavigate();
-  const { putUserData } = useUser()
+  const { putUserData } = useUser();
 
   const schema = yup
     .object({
@@ -54,7 +54,11 @@ export function Login() {
         success: {
           render() {
             setTimeout(() => {
-              navigate('/');
+              if (userData.admin) {
+                navigate('/admin/home');
+              } else {
+                navigate('/');
+              }
             }, 2000);
             return 'Login realizado com sucesso!';
           },
