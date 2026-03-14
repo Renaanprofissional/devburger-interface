@@ -1,16 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 50px;
-    background-color: #5c2669;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 50px;
+  background-color: ${(props) => props.theme.darkPurple};
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    p {
-        color: #fff;
-        font-size: 14px;
-        font-weight: lighter;
-    }
-    `
+  p {
+    color: ${(props) => props.theme.white};
+    font-size: 14px;
+    font-weight: lighter;
+  }
+`;

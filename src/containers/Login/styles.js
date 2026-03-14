@@ -11,103 +11,101 @@ export const Container = styled.div`
 `;
 
 export const LeftContainer = styled.div`
-    background: url('${BackgroudLogin}');
-    background-size: cover;
-    background-position: center;
+  background: url('${BackgroudLogin}');
+  background-size: cover;
+  background-position: center;
 
-    width: 100%;
-    height: 100%;
-    max-width: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 50%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    img {
-        width: 80%;
-    }
+  img {
+    width: 80%;
+  }
 `;
 
 export const RightContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    width: 100%;
-    height: 100%;
-    max-width: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 50%;
 
-    background: url('${Backgroud}');
-    background-size: cover;
-    background-position: center;
-    background-color: #1e1e1e;
+  background: url('${Backgroud}');
+  background-size: cover;
+  background-position: center;
+  background-color: #1e1e1e;
 
-    p{
-       color: #fff;
-       font-size: 18px;
-       font-weight: 800;
-       font-family: "Poppins", sans-serif;
+  p {
+    color: ${(props) => props.theme.white};
+    font-size: 18px;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
 
-       a{
-        color: #fff;
-        text-decoration: underline;
-       }
-       a:hover {
-        color: #9758a6;
-        transition: all 0.6s ease;
-       }
+    a {
+      color: ${(props) => props.theme.white};
+      text-decoration: underline;
     }
+    a:hover {
+      color: ${(props) => props.theme.purple};
+      transition: all 0.6s ease;
+    }
+  }
 `;
 
 export const Title = styled.h2`
-  font-family: "Road Rage", sans-serif;
+  font-family: 'Road Rage', sans-serif;
   font-size: 40px;
-  color: #fff;
+  color: ${(props) => props.theme.white};
 
   span {
-    color: #9758a6;
+    color: ${(props) => props.theme.purple};
   }
 `;
 
 export const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-    max-width: 400px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
 `;
 
 export const InputContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+
+  input {
     width: 100%;
+    border: none;
+    height: 52px;
+    border-radius: 5px;
+    padding: 0 16px;
+  }
 
-    input {
-        width: 100%;
-        border: none;
-        height: 52px;
-        border-radius: 5px;
-        padding: 0 16px;
-    }
+  label {
+    font-size: 18px;
+    font-weight: 600;
+    color: ${(props) => props.theme.white};
+    font-family: 'Poppins', sans-serif;
+  }
 
-    label {
-        font-size: 18px;
-        font-weight: 600;
-        color: #fff;
-        font-family: "Poppins", sans-serif;
-    }
-
-    p{
-        font-size: 14px;
-        line-height: 80%;
-        color: #cf3057;
-        height: 10px;
-    }
-
+  p {
+    font-size: 14px;
+    line-height: 80%;
+    color: #cf3057;
+    height: 10px;
+  }
 `;
 
 export const Link = styled(ReactLink)`
@@ -115,10 +113,10 @@ export const Link = styled(ReactLink)`
   text-decoration: underline;
   font-size: 18px;
   font-weight: 800;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 
   &:hover {
-    color: #9758a6;
+    color: ${(props) => props.theme.purple};
     transition: all 0.6s ease;
   }
 `;

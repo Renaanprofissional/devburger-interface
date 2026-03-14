@@ -1,27 +1,27 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const Container = styled.div`
-    .carousel-item {
-        padding-right: 40px;
-    }
+  .carousel-item {
+    padding-right: 40px;
+  }
 
-    .react-multiple-carousel__arrow--left {
-      left: 15px;
-      top: 10px;
-    }
+  .react-multiple-carousel__arrow--left {
+    left: 15px;
+    top: 10px;
+  }
 
-    .react-multiple-carousel__arrow--right {
-      top: 10px;
-    }
+  .react-multiple-carousel__arrow--right {
+    top: 10px;
+  }
 
-    padding-left: 40px;
-`
+  padding-left: 40px;
+`;
 
 export const Title = styled.h2`
   font-size: 32px;
   font-weight: 800;
-  color: #9758A6;
+  color: ${(props) => props.theme.purple};
   padding-bottom: 12px;
   position: relative;
   text-align: center;
@@ -34,38 +34,36 @@ export const Title = styled.h2`
     bottom: 0;
     width: 56px;
     height: 4px;
-    background-color: #9758A6;
+    background-color: ${(props) => props.theme.purple};
     left: calc(50% - 28px);
-
   }
-`
+`;
 
 export const ContainerItems = styled.div`
-background: url('${props => props.url}') no-repeat;
-background-size: cover;
-background-position: center;
-border-radius: 20px;
-cursor: grab;
+  background: url('${(props) => props.url}') no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  cursor: grab;
 
-display: flex;
-align-items: center;
-padding: 20px 10px;
-width: 100%;
-height: 150px;
-
-`
+  display: flex;
+  align-items: center;
+  padding: 20px 10px;
+  width: 100%;
+  height: 150px;
+`;
 
 export const CategoryButton = styled(Link)`
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 30px;
-    border-radius: 30px;
-    font-size: 15.5px;
-    font-weight: bold;
-    margin-top: 50px;
-    text-decoration: none;
+  color: ${(props) => props.theme.white};
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 15.5px;
+  font-weight: bold;
+  margin-top: 50px;
+  text-decoration: none;
 
-    &:hover {
-        background-color: #9758A6;
-    }
-`
+  &:hover {
+    background-color: ${(props) => props.theme.purple};
+  }
+`;

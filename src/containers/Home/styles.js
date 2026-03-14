@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import Background from "../../assets/bg2.png"
-import BannerHome from "../../assets/banner-home.svg";
+import Background from '../../assets/bg2.png';
+import BannerHome from '../../assets/banner-home.svg';
 
 export const Banner = styled.div`
   background: url('${BannerHome}');
@@ -9,22 +9,19 @@ export const Banner = styled.div`
   background-position: center;
   height: 400px;
 
-  h1{
-    font-family: "Road Rage", sans-serif;
+  h1 {
+    font-family: 'Road Rage', sans-serif;
     font-size: 80px;
-    color: #f4f4f4;
+    color: ${(props) => props.theme.secondWhite};
     position: absolute;
     right: 20%;
     top: 20%;
   }
-  
-  `
+`;
 export const Container = styled.section`
-     background: linear-gradient(
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0.8)
-     ),
-     url('${Background}');
-     background-size: cover;
-     height: 100vh;
-`
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url('${Background}');
+  background-size: cover;
+  height: 100vh;
+`;

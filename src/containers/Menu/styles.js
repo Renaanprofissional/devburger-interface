@@ -1,21 +1,19 @@
-import styled from "styled-components";
-import Background from "../../assets/bg2.png";
+import styled from 'styled-components';
+import Background from '../../assets/bg2.png';
 
 import BannerMenu from '../../assets/banner-menu.svg';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-    width: 100%;
-    min-height: 100vh;
-    background-color: #f0f0f0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: ${(props) => props.theme.secondWhite};
 
-    background: linear-gradient(
-        rgba(255, 255, 255, 0.8),
-        rgba(255, 255, 255, 0.8)
-         ),
-         url('${Background}');
-         background-size: cover;
-`
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url('${Background}');
+  background-size: cover;
+`;
 
 export const Banner = styled.div`
   display: flex;
@@ -26,54 +24,55 @@ export const Banner = styled.div`
   position: relative;
 
   background: url('${BannerMenu}'), no-repeat;
-  background-color: #1f1f1f;
+  background-color: ${(props) => props.theme.mainBlack};
   background-position: center;
   background-size: cover;
 
   h1 {
-    font-family: "Road Rage", sans-serif;
+    font-family: 'Road Rage', sans-serif;
     font-size: 80px;
     line-height: 65px;
-    color: #fff;
+    color: ${(props) => props.theme.white};
     position: absolute;
 
     right: 20%;
     top: 30%;
 
     span {
-        display: block;
-        color: #f4f4f4;
-        font-size: 20px;
+      display: block;
+      color: ${(props) => props.theme.darkWhite};
+      font-size: 20px;
     }
   }
-  
-`
+`;
 export const CategoryMenu = styled.div`
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 30px;
-    `
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+`;
 
 export const CategoryButton = styled(Link)`
-    text-decoration: none;
-    cursor: pointer;
-    background: none;
-    color: ${(props) => props.$isActiveCategory ? '#9758a6' : '#333'};
-    font-size: 24px;
-    font-weight: bold;
-    padding-bottom: 5px;
-    line-height: 20px;
-    border: none;
-    border-bottom: ${(props) => props.$isActiveCategory && '3px solid #9758a6'};
-`
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  color: ${(props) =>
+    props.$isActiveCategory ? (props) => props.theme.purple : '#333'};
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  line-height: 20px;
+  border: none;
+  border-bottom: ${(props) =>
+    props.$isActiveCategory && `3px solid ${(props) => props.theme.purple}`};
+`;
 
 export const ProductsContainer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 40px;
-    gap: 60px;
-    justify-content: center;
-    max-width: 1280px;
-    margin: 50px auto 0;
-`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 40px;
+  gap: 60px;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 50px auto 0;
+`;

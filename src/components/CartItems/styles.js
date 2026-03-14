@@ -16,18 +16,18 @@ export const ButtonGroup = styled.div`
   gap: 12px;
 
   button {
-    background-color: #9758a6;
+    background-color: ${(props) => props.theme.purple};
     width: 30px;
     height: 30px;
     border: 0;
     border-radius: 5px;
     font-size: 20px;
-    color: #fff;
+    color: ${(props) => props.theme.white};
     cursor: pointer;
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: #6f357c;
+      background-color: ${(props) => props.theme.secondDarkPurple};
     }
   }
 `;
@@ -35,7 +35,7 @@ export const ButtonGroup = styled.div`
 export const EmptyCart = styled.p`
   font-size: 20px;
   font-weight: 600;
-  color: #666;
+  color: ${(props) => props.theme.darkGray};
   text-align: center;
   margin-top: 20px;
 `;
@@ -43,7 +43,7 @@ export const EmptyCart = styled.p`
 export const ProductTotalPrice = styled.p`
   font-size: 20px;
   font-weight: 800;
-  color: #839705;
+  color: ${(props) => props.theme.gren};
   text-align: center;
   margin-top: 20px;
 `;
