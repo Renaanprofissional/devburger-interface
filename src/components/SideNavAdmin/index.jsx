@@ -1,4 +1,5 @@
 import { SignOutIcon } from '@phosphor-icons/react';
+import { useLocation } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 import { navLinks } from './navLinks';
 import { Container, NavLink, NavLinkContainer, Footer } from './styles';
@@ -6,13 +7,18 @@ import { useUser } from '../../hooks/UserContext';
 
 export function SideNavAdmin() {
   const { logout } = useUser();
+  const { pathname } = useLocation();
 
   return (
-    <Container>
+    <Container> 
       <img src={Logo} alt="Hamburger Logo DevBurger" />
       <NavLinkContainer>
         {navLinks.map((link) => (
-          <NavLink key={link.id} to={link.path}>
+          <NavLink
+            key={link.id}
+            to={link.path}
+            $isActive={pathname === link.path}
+          >
             {link.icon}
             <span>{link.label}</span>
           </NavLink>
