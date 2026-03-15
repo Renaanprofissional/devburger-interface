@@ -57,12 +57,13 @@ export function Row({ row, setOrders, orders }) {
         <TableCell>{formatDate(row.date)}</TableCell>
         <TableCell>
           <SelectStatus
-            options={orderStatusOptions}
+            options={orderStatusOptions.filter((status) => status.id !== 0)}
             defaultValue={orderStatusOptions.find(
               (status) => status.value === row.status || null,
             )}
             onChange={(status) => newStatusOrder(row.orderId, status.value)}
             isLoading={loading}
+            menuPortalTarget={document.body}
           />
         </TableCell>
       </TableRow>
