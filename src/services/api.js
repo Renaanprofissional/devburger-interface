@@ -7,12 +7,13 @@ export const api = axios.create({
       : 'https://dev-burguer-api.vercel.app',
 });
 
-api.interceptors.request.use((config) => {
+api.interceptors.request.use(async (config) => {
   const userData = localStorage.getItem('devburger:userData');
 
-  const token = userData && JSON.parse(userData).token;
-
-  config.headers.Authorization = `Bearer ${token}`;
+  if (userData) {
+    const token = JSON.parse(userData).token;
+    config.headers.Authorization = `Bearer ${token}`;
+  }
 
   return config;
 });
