@@ -8,5 +8,6 @@ export * from './OffersCarousel';
 export * from './CartResume';
 export * from './CartItems';
 export * from './Table';
+export * from './Button';
 export { default as CheckoutForm } from './Stripe/CheckoutForm';
 export * from './SideNavAdmin';
